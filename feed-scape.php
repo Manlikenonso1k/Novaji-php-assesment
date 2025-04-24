@@ -1,7 +1,7 @@
 <?php
 
 // API endpoint for circulars
-$url = 'https://www.cbn.gov.ng/Documents/AjaxHandler.ashx';
+$url = 'https://www.cbn.gov.ng/API/GetAllCirculars';
 
 // Directory to save PDFs
 $downloadDir = __DIR__ . '/pdfs';
