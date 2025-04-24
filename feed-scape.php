@@ -10,7 +10,7 @@ if (!is_dir($downloadDir)) {
 }
 
 // Set total pages to loop through (adjust if needed)
-$totalPages = 130;
+$totalPages = 259;
 $pageSize = 20;
 
 $data = [];
