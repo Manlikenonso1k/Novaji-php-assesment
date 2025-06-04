@@ -1,5 +1,10 @@
 <?php
-$apiKey = 'AIzaSyD4rABtastOUpaO90I2E_bqWzbGXzerY_A';
+require 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$apiKey = $_ENV['GOOGLE_API_KEY'];
 
 $endpoint = 'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=' . $apiKey;
 
@@ -27,9 +32,6 @@ if ($response === false) {
 }
 
 $result = json_decode($response, true);
-
-// Debugging help
-// echo json_encode($result, JSON_PRETTY_PRINT);
 
 echo $result['candidates'][0]['content']['parts'][0]['text'];
 ?>
